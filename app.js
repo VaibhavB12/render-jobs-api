@@ -32,7 +32,20 @@ app.use(xss());
 // extra packages
 
 app.get('/', (req, res) => {
-  res.send('jobs api')
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Jobs API</title>
+    </head>
+    <body>
+      <h1>VARSHA BAVLAT BADHIR</h1>
+      <p>This is a simple example where we return HTML directly in the response.</p>
+    </body>
+    </html>
+    `)
 })
 // routes
 app.use('/api/v1/auth', authRouter);
